@@ -1,0 +1,14 @@
+services:
+ mysql:
+  image : mysql:3609
+  environment:
+   MYSQL_ROOT : rootuser
+   MYSQL_USERNAME : user1
+   MYSQL_PASSWORD : userpass
+   MYSQL_HOST : user123
+ web:
+  image : web
+  depends_on : 
+   - mysql
+networks:
+ webnet:
